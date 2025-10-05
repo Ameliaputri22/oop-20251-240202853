@@ -1,5 +1,5 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu ke-1
+Topik: Pengenalan Paradigma dan Setup Proyek
 
 ## Identitas
 - Nama  : Amelia Putri Azzahra
@@ -9,17 +9,20 @@ Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+•Mahasiswa mampu mendefinisikan paradigma prosedural, OOP, dan fungsional.
+•Mahasiswa mampu membandingkan kelebihan dan keterbatasan tiap paradigma.
+•Mahasiswa mampu memberikan contoh program sederhana untuk masing-masing paradigma.
+•Mahasiswa aktif dalam diskusi kelas (bertanya, menjawab, memberi opini).
 
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+Paradigma pemrograman adalah cara pandang dalam menyusun program:
+•Prosedural: program dibangun sebagai rangkaian perintah (fungsi/prosedur).
+•OOP (Object-Oriented Programming): program dibangun dari objek yang memiliki data (atribut) dan perilaku (method).
+•Fungsional: program dipandang sebagai pemetaan fungsi matematika, lebih menekankan ekspresi dan transformasi data.
+
+Dalam konteks Agri-POS, OOP membantu memodelkan entitas nyata seperti Produk, Transaksi, dan Pembayaran sebagai objek. Dengan demikian, sistem lebih mudah dikembangkan dan dipelihara.
 
 ---
 
@@ -63,11 +66,11 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+1.Apakah OOP selalu lebih baik dari prosedural?
+   Jawaban:
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+2. Kapan Functional programming lebih cocok digunakan dibanding OOP atau prosedural?
+   Jawaban :
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+3.bagaimana Paradigma (prosedural,oop, fungsional) memengaruhi maintainability dan scalability aplikasi?
+   Jawaban:
