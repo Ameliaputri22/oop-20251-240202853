@@ -27,10 +27,21 @@ Dalam konteks Agri-POS, OOP membantu memodelkan entitas nyata seperti Produk, Tr
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+1. Setup Project
+•Pastikan sudah menginstall JDK (Java Development Kit), IDE (misal: IntelliJ IDEA, VS Code, NetBeans), Git, PostgreSQL, dan JavaFX di komputer.
+•Buat folder project oop-pos-<nim>.
+•Inisialisasi repositori Git.
+•Buat struktur awal src/main/java/com/upb/agripos/.
+• Pastikan semua tools dapat berjalan (uji dengan membuat dan menjalankan program Java sederhana).
+
+2. Program Sederhana dalam 3 Paradigma
+
+•Produral: program untuk menghitung total harga dua produk.
+•OOP: class Produk dengan atribut nama dan harga, buat minimal tiga objek, lalu hitung total.
+•Fungsional: gunakan Stream atau lambda untuk menghitung total harga dari minimal tiga objek.
+
+3. Commit dan Push
+Commit dengan pesan: week1-setup-hello-pos 
 
 ---
 
