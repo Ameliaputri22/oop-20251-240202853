@@ -35,7 +35,6 @@ Dalam konteks Agri-POS, OOP membantu memodelkan entitas nyata seperti Produk, Tr
 • Pastikan semua tools dapat berjalan (uji dengan membuat dan menjalankan program Java sederhana).
 
 2. Program Sederhana dalam 3 Paradigma
-
 •Produral: program untuk menghitung total harga dua produk.
 •OOP: class Produk dengan atribut nama dan harga, buat minimal tiga objek, lalu hitung total.
 •Fungsional: gunakan Stream atau lambda untuk menghitung total harga dari minimal tiga objek.
@@ -46,15 +45,25 @@ Commit dengan pesan: week1-setup-hello-pos
 ---
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
-
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
-)
----
+1. **Prosedural**
+// HelloProcedural.java
+public class HelloProcedural {
+   public static void main(String[] args) {
+      String nim = "2310112345";
+      String nama = "Budi";
+      String[] produk = {"Beras", "Pupuk", "Benih"};
+      int[] harga = {10000, 15000, 12000};
+      int total = 0;
+      System.out.println("Hello POS World");
+      System.out.println("NIM: " + nim + ", Nama: " + nama);
+      System.out.println("Daftar Produk:");
+      for (int i = 0; i < produk.length; i++) {
+         System.out.println("- " + produk[i] + ": " + harga[i]);
+         total += harga[i];
+      }
+      System.out.println("Total harga semua produk: " + total);
+   }
+}
 
 ## Hasil Eksekusi
 (Sertakan screenshot hasil eksekusi program.  
