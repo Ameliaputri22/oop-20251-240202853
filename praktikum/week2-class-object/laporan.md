@@ -1,5 +1,4 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 2 Bab 2 – Class dan Object (Produk Pertanian)
 
 ## Identitas
 - Nama  : Amelia Putri Azzahra 
@@ -19,24 +18,36 @@ Mahasiswa mampu menyusun laporan praktikum dengan bukti kode, hasil eksekusi, da
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
 
+Class adalah blueprint atau cetak biru dari sebuah objek. Objek merupakan instansiasi dari class yang berisi atribut (data) dan method (perilaku). Dalam OOP, enkapsulasi dilakukan dengan menyembunyikan data menggunakan access modifier (public, private, protected) serta menyediakan akses melalui getter dan setter.
+
+Dalam konteks Agri-POS, produk pertanian seperti benih, pupuk, dan alat pertanian dapat direpresentasikan sebagai objek yang memiliki atribut nama, harga, dan stok. Dengan menggunakan class, setiap produk dapat dibuat, dikelola, dan dimanipulasi secara lebih terstruktur.
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+1.Membuat Class Produk
+
+Buat file Produk.java pada package model.
+Tambahkan atribut: kode, nama, harga, dan stok.
+Gunakan enkapsulasi dengan menjadikan atribut bersifat private dan membuat getter serta setter untuk masing-masing atribut.
+2.Membuat Class CreditBy
+
+Buat file CreditBy.java pada package util.
+Isi class dengan method statis untuk menampilkan identitas mahasiswa di akhir output: credit by: <NIM> - <Nama>.
+3.Membuat Objek Produk dan Menampilkan Credit
+
+Buat file MainProduk.java.
+Instansiasi minimal tiga objek produk, misalnya "Benih Padi", "Pupuk Urea", dan satu produk alat pertanian.
+Tampilkan informasi produk melalui method getter.
+Panggil CreditBy.print("<NIM>", "<Nama>") di akhir main untuk menampilkan identitas.
+4.Commit dan Push
+
+Commit dengan pesan: week2-class-object.
 
 ---
 
 ## Kode Program
-
+1. Produk.java
 package com.upb.agripos.model;
 
 public class Produk {
@@ -76,6 +87,7 @@ public class Produk {
         }
     }
 }
+2. CreditBy.java
 package com.upb.agripos.util;
 
 public class CreditBy {
@@ -83,6 +95,7 @@ public class CreditBy {
         System.out.println("\ncredit by: " + nim + " - " + nama);
     }
 }
+3. MainProduk.java
 package com.upb.agripos;
 
 import com.upb.agripos.model.Produk;
@@ -124,11 +137,11 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+1.Mengapa atribut sebaiknya dideklarasikan sebagai private dalam class?
+Jawaban: …
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+2.Apa fungsi getter dan setter dalam enkapsulasi?
+Jawaban: …
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+3.Bagaimana cara class Produk mendukung pengembangan aplikasi POS yang lebih kompleks?
+Jawaban: …
