@@ -138,10 +138,10 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 
 ## Quiz
 1.Mengapa atribut sebaiknya dideklarasikan sebagai private dalam class?
-Jawaban: …
+Jawaban:Atribut sebaiknya dideklarasikan sebagai private untuk mempraktikkan enkapsulasi, yaitu menyembunyikan detail implementasi internal dan melindungi data dari akses atau modifikasi yang tidak sah. Ini memungkinkan kontrol yang lebih besar atas bagaimana data diubah, mencegah perubahan yang tidak disengaja, meningkatkan keamanan, dan mempermudah pemeliharaan kode
 
 2.Apa fungsi getter dan setter dalam enkapsulasi?
-Jawaban: …
+Jawaban:Fungsi getter adalah untuk mengambil (membaca) nilai dari variabel privat secara terkontrol, sementara fungsi setter adalah untuk mengubah (menulis) nilai dari variabel tersebut dengan logika validasi tambahan. Keduanya memastikan integritas data dengan menjaga data tetap tersembunyi dan melindungi status internal objek dari akses langsung dari luar kelas.
 
 3.Bagaimana cara class Produk mendukung pengembangan aplikasi POS yang lebih kompleks?
-Jawaban: …
+Jawaban:Class Produk mendukung pengembangan aplikasi POS yang lebih kompleks dengan menyimpan informasi produk yang detail, seperti varian, stok, dan harga, yang dapat dihubungkan dengan fitur-fitur lain seperti inventaris, promosi, dan pelaporan. Class ini memungkinkan pengelolaan stok yang lebih terperinci dan pelacakan data produk yang dinamis, mendukung kebutuhan bisnis yang lebih besar dan operasional yang rumit seperti multi-outlet, multi-metode pembayaran, dan integrasi dengan sistem lain. 
