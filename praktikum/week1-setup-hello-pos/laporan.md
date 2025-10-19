@@ -122,12 +122,17 @@ public class HelloFunctional {
 ---
 
 ## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
----
+Analisis ini mencakup beberapa aspek kunci:
+1. Relevansi Tujuan Praktikum
+Praktikum ini dinilai sangat relevan karena:
+Fondasi Pengembangan: Ini memberikan landasan fundamental yang diperlukan sebelum memasuki materi pemrograman yang lebih kompleks.
+Kesiapan Alat (Tools): Memastikan bahwa semua peserta memiliki lingkungan pengembangan yang berfungsi dan dikonfigurasi dengan benar, menghilangkan hambatan teknis di kelas atau sesi praktikum berikutnya.
+Penerapan Paradigma: Penilaian sejauh mana praktikan dapat mengidentifikasi atau mengimplementasikan konsep dasar dari paradigma yang berbeda (misalnya, membuat fungsi terpisah untuk prosedural, atau kelas dan objek untuk PBO) dalam proyek yang mereka setup.
+Debugging dan Eksekusi Kode: Analisis penggunaan fitur run dan debug di VS Code untuk menguji kode yang telah ditulis.
+2. Hasil yang Dapat Diukur
+Dari analisis juga mengidentifikasi tantangan, seperti:
+Variasi Sistem Operasi: Perbedaan setup antara Windows, macOS, dan Linux seringkali menjadi kendala teknis.
+Pemahaman Awal yang Beragam: Latar belakang praktikan yang berbeda mempengaruhi kecepatan mereka dalam menyerap
 
 ## Kesimpulan
 Dengan menggunakan Paradigma dan Setup Proyek  memperoleh pemahaman dasar mengenai berbagai paradigma pemrograman (seperti prosedural, berorientasi objek, fungsional, dsb.) dan dapat mengidentifikasi perbedaan serta kapan harus menggunakan paradigma tertentu sesuai kebutuhan proyek.Melalui latihan setup dan pengenalan paradigma, praktikan dapat menerapkan prinsip-prinsip dasar penulisan kode yang bersih, terstruktur, dan mudah dipahami, yang merupakan fondasi penting untuk proyek pemrograman yang lebih kompleks. 
