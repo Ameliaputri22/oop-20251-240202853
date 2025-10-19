@@ -130,8 +130,7 @@ public class HelloFunctional {
 ---
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
+Dengan menggunakan Paradigma dan Setup Proyek  memperoleh pemahaman dasar mengenai berbagai paradigma pemrograman (seperti prosedural, berorientasi objek, fungsional, dsb.) dan dapat mengidentifikasi perbedaan serta kapan harus menggunakan paradigma tertentu sesuai kebutuhan proyek.Melalui latihan setup dan pengenalan paradigma, praktikan dapat menerapkan prinsip-prinsip dasar penulisan kode yang bersih, terstruktur, dan mudah dipahami, yang merupakan fondasi penting untuk proyek pemrograman yang lebih kompleks. 
 
 ---
 
