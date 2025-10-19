@@ -123,19 +123,13 @@ public class MainProduk {
 ---
 
 ## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
----
+
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
-
----
-
+Kesimpulan singkat dari praktikum class dan objek di VS Code adalah bahwa praktikum ini berhasil memberikan pemahaman praktis mengenai konsep dasar pemrograman berorientasi objek (PBO). Praktikan mampu mendemonstrasikan cara:
+Mendefinisikan Class: Membuat struktur dasar atau "cetak biru" (blueprint) menggunakan sintaks bahasa pemrograman yang relevan di VS Code.
+Menciptakan Objek (Instantiation): Mengimplementasikan class yang telah dibuat menjadi objek nyata (instance) dengan properti dan metode yang spesifik.
+Menggunakan Fitur VS Code: Memanfaatkan fitur editor seperti syntax highlighting, autocomplete, dan debugging untuk menulis, menguji, dan memahami interaksi antara objek dan class secara efisien.
 ## Quiz
 1.Mengapa atribut sebaiknya dideklarasikan sebagai private dalam class?
 Jawaban:Atribut sebaiknya dideklarasikan sebagai private untuk mempraktikkan enkapsulasi, yaitu menyembunyikan detail implementasi internal dan melindungi data dari akses atau modifikasi yang tidak sah. Ini memungkinkan kontrol yang lebih besar atas bagaimana data diubah, mencegah perubahan yang tidak disengaja, meningkatkan keamanan, dan mempermudah pemeliharaan kode
