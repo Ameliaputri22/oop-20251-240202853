@@ -31,24 +31,75 @@ AlatPertanian.java → atribut tambahan: material (baja, kayu, plastik).
 
 Instansiasi minimal satu objek dari tiap subclass.
 Tampilkan data produk dengan memanfaatkan inheritance.
-Menambahkan CreditBy
+4.Menambahkan CreditBy
 
 Panggil class CreditBy untuk menampilkan identitas mahasiswa.
 Commit dan Push
 
-Commit dengan pesan: week3-inheritance.
+5.Commit dengan pesan: week3-inheritance.
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
+1.Benih.java
+package com.upb.agripos.model;
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
-)
----
+public class Benih extends Produk {
+    private String varietas;
 
+    public Benih(String kode, String nama, double harga, int stok, String varietas) {
+        super(kode, nama, harga, stok);
+        this.varietas = varietas;
+    }
+
+    public String getVarietas() { return varietas; }
+    public void setVarietas(String varietas) { this.varietas = varietas; }
+}
+2.Pupuk.java
+package com.upb.agripos.model;
+
+public class Pupuk extends Produk {
+    private String jenis;
+
+    public Pupuk(String kode, String nama, double harga, int stok, String jenis) {
+        super(kode, nama, harga, stok);
+        this.jenis = jenis;
+    }
+
+    public String getJenis() { return jenis; }
+    public void setJenis(String jenis) { this.jenis = jenis; }
+}
+3.AlatPertanian.java
+package com.upb.agripos.model;
+
+public class AlatPertanian extends Produk {
+    private String material;
+
+    public AlatPertanian(String kode, String nama, double harga, int stok, String material) {
+        super(kode, nama, harga, stok);
+        this.material = material;
+    }
+
+    public String getMaterial() { return material; }
+    public void setMaterial(String material) { this.material = material; }
+}
+4.MainInheritance.java
+package com.upb.agripos;
+
+import com.upb.agripos.model.*;
+import com.upb.agripos.util.CreditBy;
+
+public class MainInheritance {
+    public static void main(String[] args) {
+        Benih b = new Benih("BNH-001", "Benih Padi IR64", 25000, 100, "IR64");
+        Pupuk p = new Pupuk("PPK-101", "Pupuk Urea", 350000, 40, "Urea");
+        AlatPertanian a = new AlatPertanian("ALT-501", "Cangkul Baja", 90000, 15, "Baja");
+
+        System.out.println("Benih: " + b.getNama() + " Varietas: " + b.getVarietas());
+        System.out.println("Pupuk: " + p.getNama() + " Jenis: " + p.getJenis());
+        System.out.println("Alat Pertanian: " + a.getNama() + " Material: " + a.getMaterial());
+
+        CreditBy.print("<NIM>", "<Nama Mahasiswa>");
+    }
+}
 ## Hasil Eksekusi
 (Sertakan screenshot hasil eksekusi program.  
 ![Screenshot hasil](screenshots/hasil.png)
@@ -64,17 +115,14 @@ System.out.println(p1.getNama());
 ---
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
-
----
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+1.Apa keuntungan menggunakan inheritance dibanding membuat class terpisah tanpa hubungan?
+Jawaban: …
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+2.Bagaimana cara subclass memanggil konstruktor superclass?
+Jawaban: …
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+3?Berikan contoh kasus di POS pertanian selain Benih, Pupuk, dan Alat Pertanian yang bisa dijadikan subclass.
+Jawaban: …
+
