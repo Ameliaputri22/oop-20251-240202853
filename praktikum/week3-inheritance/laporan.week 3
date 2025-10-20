@@ -34,9 +34,9 @@ Tampilkan data produk dengan memanfaatkan inheritance.
 4.Menambahkan CreditBy
 
 Panggil class CreditBy untuk menampilkan identitas mahasiswa.
-Commit dan Push
+5.Commit dan Push
 
-5.Commit dengan pesan: week3-inheritance.
+Commit dengan pesan: week3-inheritance.
 
 ## Kode Program
 1.Benih.java
