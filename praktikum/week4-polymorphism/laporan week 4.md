@@ -154,7 +154,7 @@ Artinya:
 -Saat program dikompilasi, Java hanya tahu bahwa variabel itu bertipe superclass.
 -Tapi saat dijalankan, Java melihat objek yang sebenarnya dan memanggil method milik kelas objek tersebut.Inilah yang memungkinkan polymorphism bekerja — satu referensi superclass bisa memanggil method berbeda tergantung objeknya.
  Inilah yang memungkinkan polymorphism bekerja — satu referensi superclass bisa memanggil method berbeda tergantung objeknya.
-  3. Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian.
+ 3.Berikan contoh kasus polymorphism dalam sistem POS selain produk pertanian.
   **Jawaban:**Dalam sebuah sistem kasir (POS), ada berbagai jenis produk yang dijual, lalu menurunkannya menjadi beberapa subclass seperti: Makanan 🍞,Minuman 🧃,Barang Elektronik ⚡
 Semua jenis produk memiliki informasi dasar yang sama, seperti nama dan harga.
 Namun, setiap jenis produk memiliki cara menampilkan informasi yang berbeda (misalnya, tanggal kedaluwarsa hanya untuk makanan/minuman, dan garansi hanya untuk elektronik).Pada sistem POS ini, polymorphism memungkinkan method infoProduk() menampilkan informasi yang berbeda sesuai jenis produk, walaupun semua objek disimpan dalam array bertipe superclass Produk.
