@@ -107,11 +107,23 @@ public class MainInheritance {
 ---
 
 ## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
+1. Tujuan Praktikum
+
+Untuk memahami konsep inheritance (pewarisan) dalam pemrograman berorientasi objek, yaitu bagaimana sebuah class dapat mewarisi atribut dan method dari class lain sehingga kode menjadi lebih efisien, terstruktur, dan mudah dikembangkan.Cara Kode Berjalan
+
+Program dijalankan dari main() di class MainInheritance.
+
+Objek benih dibuat dari class Benih, yang merupakan subclass dari Produk.
+
+Saat objek dibuat, constructor Benih akan dijalankan → memanggil constructor Produk dengan keyword super.
+
+Data dari Produk diisi (kode, nama, harga), lalu atribut jenisTanaman diisi di Benih.
+
+Method deskripsi() dijalankan → menampilkan data produk dari tampilkanInfo() milik superclass dan atribut tambahan jenisTanaman.
+
+Hasil akhirnya, seluruh informasi produk ditampilkan di console.
+
+
 ---
 
 ## Kesimpulan
