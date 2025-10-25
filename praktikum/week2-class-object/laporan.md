@@ -123,8 +123,29 @@ public class MainProduk {
 ---
 
 ## Analisis
-
-
+1. Tujuan Praktikum
+Untuk memahami konsep dasar class dan object dalam pemrograman berorientasi objek (OOP), serta cara menggunakannya untuk merepresentasikan produk pertanian seperti Benih, Pupuk, dan Alat Pertanian.
+2. Cara Kode Berjalan
+-Program dimulai dari method main() pada class MainProduk.
+-Di dalamnya dibuat dua objek (p1 dan p2) dari class Produk.
+-Saat objek dibuat, constructor pada class Produk dijalankan untuk mengisi nilai atribut (kodeProduk, namaProduk, harga).
+-Kemudian, method tampilkanInfo() dipanggil untuk menampilkan data produk ke layar.
+-Hasilnya, informasi masing-masing produk tercetak di console.
+3.Beberapa kendala umum yang sering muncul saat praktikum:
+*	Error “constructor not found” karena Nama parameter pada pemanggilan constructor tidak sesuai.	Pastikan urutan dan tipe data pada pemanggilan sama dengan yang ada di class
+* Nilai atribut tidak tampil karena Tidak memanggil method tampilkanInfo() atau atribut belum diisi.Panggil method dengan benar setelah objek dibuat
+* Error “cannot find symbol” karena Salah ketik nama variabel atau method. Cek kembali penulisan nama variabel dan huruf besar/kecil (case-sensitive)
+*	Tidak paham hubungan antara class dan object karena Kurang memahami konsep instansiasi.Pelajari alur: class sebagai blueprint → object sebagai hasil nyata dari class
+4. Cara Mengatasi Kendala
+-Periksa urutan dan tipe data pada constructor.
+-Gunakan naming convention Java (huruf kecil untuk variabel, huruf besar untuk nama class).
+-Tambahkan komentar agar mudah memahami alur program.
+-Jalankan kode step-by-step menggunakan System.out.println() untuk memastikan nilai atribut sudah benar.
+5. Kesimpulan analisis 
+-Class berfungsi sebagai cetak biru (blueprint) untuk membuat objek.
+-Object adalah instance nyata dari class yang memiliki data dan perilaku sendiri.
+-Program berjalan dengan membuat objek, mengisi data melalui constructor, dan menampilkan informasi lewat method.
+-Kesalahan umumnya terjadi karena penulisan kode tidak konsisten atau pemanggilan constructor yang tidak sesuai.
 ## Kesimpulan
 Kesimpulan singkat dari praktikum class dan objek di VS Code adalah bahwa praktikum ini berhasil memberikan pemahaman praktis mengenai konsep dasar pemrograman berorientasi objek (PBO). Praktikan mampu mendemonstrasikan cara:
 Mendefinisikan Class: Membuat struktur dasar atau "cetak biru" (blueprint) menggunakan sintaks bahasa pemrograman yang relevan di VS Code.
