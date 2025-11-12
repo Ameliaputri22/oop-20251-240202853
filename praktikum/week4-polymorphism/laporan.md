@@ -88,8 +88,8 @@ Dengan demikian, konsep polymorphism membuat program menjadi lebih fleksibel, mu
 ---
 
 ## Quiz
-(1.  Apa perbedaan overloading dan overriding? 
-   **Jawaban:** …  overloading Membuat beberapa method dengan nama sama tetapi parameter berbeda dalam satu kelas yang bertujuan Untuk meningkatkan kemudahan penggunaan (metode yang sama bisa dipanggil dengan cara berbeda).Compile-time (dikenal juga sebagai static polymorphism). 
+.  Apa perbedaan overloading dan overriding? 
+   **Jawaban:** …  overloading Membuat beberapa method dengan nama sama tetapi parameter berbeda dalam satu kelas yang bertujuan Untuk meningkatkan kemudahan penggunaan (metode yang sama bisa dipanggil dengan cara berbeda).Compile-time(dikenal juga sebagai static polymorphism). 
    overriding Menulis ulang (menimpa) method dari superclass di dalam subclass dengan isi (implementasi) yang berbeda.Yang bertujuan Untuk mengubah perilaku method yang diwarisi dari superclass.Terjadi di antara dua kelas yang memiliki hubungan inheritance (pewarisan).Runtime (dikenal juga sebagai dynamic polymorphism).Keyword @Override diperlukan (untuk menandakan method menimpa method induk).
 
 2. Bagaimana Java menentukan method mana yang dipanggil dalam dynamic binding? 
