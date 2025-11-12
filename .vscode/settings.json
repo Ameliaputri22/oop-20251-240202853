@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "praktikum/week4-polymorphism/src",
+        "praktikum/week3-inheritance/src/main/java/com/upb/agripos",
+        "praktikum/week4-polymorphism"
+    ]
+}
