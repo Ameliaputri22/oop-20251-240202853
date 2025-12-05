@@ -1,4 +1,4 @@
-# Laporan Praktikum Minggu ke 5 
+# Laporan Praktikum Minggu ke 5 Abstraction interface.
 
 ## Identitas
 - Nama  : [Amelia Putri Azzahra]
@@ -12,15 +12,27 @@
 2. Mampu menjelaskan perbedaan antara Abstract Class dan Interface, dari sisi konsep, penggunaan, dan karakteristiknya dalam struktur program.
 3.Menerapkan teknik inheritance dan polymorphism melalui penggunaan abstract method dan interface method.
 4.Melatih kemampuan membuat desain kelas dengan memisahkan definisi perilaku (interface) dan kerangka dasar objek (abstract class).
-
-
 ---
 
 ## Dasar Teori
-
-
+1.Abstraction adalah salah satu pilar utama dalam pemrograman berorientasi objek (OOP) yang bertujuan untuk menyembunyikan detail implementasi dan hanya menampilkan fitur penting dari sebuah objek.
+2.Abstract class adalah kelas yang tidak dapat dibuat objeknya secara langsung, tetapi berfungsi sebagai kerangka dasar untuk kelas turunan.Di dalam abstract class dapat terdapat:
+-Method biasa (memiliki implementasi)
+-Method abstract (hanya deklarasi, tanpa body)
+Ciri–ciri Abstract Class :
+-Digunakan sebagai class induk.
+-Mengandung minimal satu method abstract.
+-Kelas turunannya wajib mengoverride method abstract.
+-Bisa memiliki atribut, konstruktor, dan method biasa.
+-Mendukung inheritance (extends).
+3.Interface adalah “kontrak” berisi kumpulan method tanpa implementasi yang harus diisi oleh kelas yang mengimplementasikannya.
+Interface digunakan untuk mendefinisikan perilaku yang dapat dimiliki oleh berbagai objek berbeda.Ciri–ciri Interface
+-Semua method secara default abstract.
+-Tidak memiliki konstruktor.
+-Tidak dapat memiliki atribut, hanya konstanta (final static).
+-Kelas yang mengimplementasi interface wajib mengisi semua method.
+-Mendukung multiple inheritance (satu kelas dapat mengimplementasi banyak interface)
 ---
-
 ## Langkah Praktikum
 (Tuliskan Langkah-langkah dalam prakrikum, contoh:
 1. Langkah-langkah yang dilakukan (setup, coding, run).  
@@ -47,10 +59,39 @@ System.out.println(p1.getNama());
 ---
 
 ## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
+(a.)Pada praktikum Abstraction (Abstract Class & Interface), kode berjalan melalui mekanisme pewarisan dan implementasi kontrak perilaku.
+Ketika program dieksekusi:
+   -Abstract class berfungsi sebagai kerangka dasar. Kelas turunan membuat objek dan menjalankan method yang berasal dari abstract class.
+Method abstract yang ada di superclass akan dioverride oleh subclass sehingga setiap kelas memiliki implementasi masing-masing.
+   -Interface memberikan serangkaian method yang harus diimplementasikan. Ketika sebuah objek dibuat dari kelas yang mengimplementasi interface, objek tersebut wajib menyediakan definisi semua method yang ada di interface.
+   - Program kemudian mengakses objek menggunakan polymorphism — yaitu memanggil method melalui referensi abstract atau interface, namun yang dijalankan adalah implementasi di kelas sebenarnya.
+b.)Perbedaan Pendekatan Minggu Ini Dibanding Minggu Sebelumnya
+* Minggu ini (Abstraction – Abstract Class & Interface):
+   -Fokus pada menyembunyikan detail implementasi dan menyediakan kerangka umum.
+   -Menggunakan abstract class sebagai blueprint dasar.
+   -Menggunakan interface untuk mendefinisikan perilaku tanpa struktur.
+   -Menekankan penggunaan polymorphism, konsep kontrak, dan “kerangka besar” desain kelas.
+   -Kode menjadi lebih fleksibel karena kelas dapat mengimplementasi banyak interface.
+
+* Minggu sebelumnya (biasanya Inheritance, Class & Object dasar):
+-Fokus pada pewarisan sederhana antara parent–child.
+-Semua method memiliki implementasi penuh.
+-Tidak ada konsep kontrak atau method abstract.
+-Lebih menekankan pemahaman dasar OOP seperti atribut, method, dan pembentukan objek.
+-Struktur kode lebih sederhana dan biasanya lebih linear.
+ c.)Kendala yang Dihadapi dan Cara Mengatasinya
+Berikut contoh kendala yang umum terjadi saat praktikum:
+       a. Error karena abstract method belum dioverride
+Masalah: Kelas turunan tidak mengimplementasi semua method abstract/interface.
+Solusi: Gunakan fitur auto-generate method di VS Code (klik lampu kuning > Implement methods).
+       b. Bingung kapan menggunakan abstract class dan kapan menggunakan interface
+Solusi:Gunakan abstract class jika ada struktur/atribut yang sama dan gunakan interface jika hanya butuh perilaku tambahan.
+       c. Tidak dapat membuat objek dari abstract class
+Solusi: Pastikan membuat objek dari kelas turunannya, bukan dari abstract class.
+      d. Kesalahan struktur folder atau konfigurasi project di Visual Studio Code
+Solusi: Pastikan setiap file berada di folder yang sama atau package yang sesuai dan jalankan dengan command yang benar (javac dan java untuk Java, misalnya).
+      e. Kesulitan memahami alur eksekusi
+Solusi:Tambahkan System.out.println() di setiap method untuk melihat urutan eksekusi dan periksa ulang hierarki class dan interface.
 )
 ---
 
@@ -73,4 +114,32 @@ Dengan demikian, abstract class digunakan untuk membuat struktur dasar objek, se
 Dengan interface, Java hanya mewariskan kontrak perilaku, bukan kode program yang sebenarnya. Kelas yang mengimplementasikan banyak interface tetap membuat implementasi method-nya sendiri, sehingga menghindari benturan kode, menjaga konsistensi, serta membuat struktur pewarisan lebih jelas dan aman.
 
  3. Pada contoh Agri-POS, bagian mana yang paling tepat menjadi abstract class dan mana yang menjadi interface? Jelaskan alasannya
-   **Jawaban:** …  
+   **Jawaban:** a.) Bagian yang tepat menjadi Abstract Class: Produk
+Abstract class cocok digunakan untuk entity utama seperti produk pertanian, misalnya: Beras, Cabai, Sayur, Telur, dll.
+Alasannya:
+-Semua produk memiliki atribut dasar yang sama, seperti nama, harga, dan stok.
+-Setiap produk membutuhkan struktur umum, tetapi mungkin memiliki perhitungan atau proses khusus, misalnya cara menghitung diskon, kualitas, atau metode pengepakan.
+-Abstract class memungkinkan adanya method biasa dan method abstract, sehingga kelas turunan dapat mengembangkan perilaku spesifik.
+Contoh :
+abstract class Produk {
+    String nama;
+    double harga;
+
+    abstract double hitungDiskon();
+}
+      b.) Bagian yang tepat menjadi Interface: DapatDijual, DapatDicetak, DapatDiukur
+Interface cocok digunakan untuk perilaku tambahan, bukan struktur.Contoh interface yang relevan:
+DapatDijual → untuk item apa pun yang bisa diproses POS.
+DapatDicetak → untuk objek yang dapat dicetak struknya.
+DapatDiukur → untuk produk yang dijual berdasarkan berat atau volume.
+Alasannya:
+-Tidak semua objek memiliki struktur yang sama, tetapi bisa saja memiliki perilaku yang sama.
+-Interface memungkinkan multiple inheritance, sehingga sebuah kelas dapat memiliki banyak kemampuan tanpa benturan kode.
+-Interface mendefinisikan kontrak aksi, bukan data.
+Contoh: interface DapatDijual {
+    double getHargaJual();
+}
+
+interface DapatDicetak {
+    void cetakStruk();
+}
