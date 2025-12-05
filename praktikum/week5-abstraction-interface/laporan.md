@@ -34,22 +34,28 @@ Interface digunakan untuk mendefinisikan perilaku yang dapat dimiliki oleh berba
 -Mendukung multiple inheritance (satu kelas dapat mengimplementasi banyak interface)
 ---
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
-
+1. Abstract Class – Pembayaran
+   Buat Pembayaran (abstract) dengan field invoiceNo, total dan method:
+-double biaya() (abstrak) → biaya tambahan (fee).
+-boolean prosesPembayaran() (abstrak) → mengembalikan status berhasil/gagal.
+-double totalBayar() (konkrit) → return total + biaya();.
+2. Subclass Konkret
+-Cash → biaya = 0, proses = selalu berhasil jika tunai >= totalBayar().
+-EWallet → biaya = 1.5% dari total; proses = membutuhkan validasi.
+3. Interface
+-Validatable → boolean validasi(); (contoh: OTP).
+-Receiptable → String cetakStruk();
+4.Multiple Inheritance via Interface
+-EWallet mengimplementasikan dua interface: Validatable, Receiptable.
+-Cash setidaknya mengimplementasikan Receiptable.
+5.Main Class
+-Buat MainAbstraction.java untuk mendemonstrasikan pemakaian Pembayaran (polimorfik).
+-Tampilkan hasil proses dan struk. Di akhir, panggil CreditBy.print("[NIM]", "[Nama]").
+6.Commit dan Push .Commit dengan pesan: week5-abstraction-interface.
 ---
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
-)
 ---
 
 ## Hasil Eksekusi
