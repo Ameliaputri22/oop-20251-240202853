@@ -1,16 +1,12 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
-
+# Laporan Praktikum Minggu Bab 9 – Exception Handling, Custom Exception, dan Penerapan Design PatternJelaskan perbedaan error dan exception.
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : [Amelia Putri Azzahra]
+- NIM   : [240202853]
+- Kelas : [3IKRA]
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
 
 ---
 
@@ -63,11 +59,108 @@ Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+1. Perbedaan Error dan Exception
+Jawab : Error dan exception sama-sama masalah saat program berjalan, tapi level dan penanganannya beda.
+*Error
+-Kesalahan fatal dan tidak bisa / tidak seharusnya ditangani program
+-Biasanya terjadi karena masalah sistem
+-Program umumnya langsung berhenti
+Contoh:
+OutOfMemoryError → memori habis
+StackOverflowError → rekursi tak berujung
+Intinya: error = masalah serius dari sistem
+* Exception
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+Kesalahan yang masih bisa ditangani
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+Terjadi karena logika program atau input pengguna
+
+Bisa di-handle dengan try–catch
+
+Contoh:
+
+NullPointerException
+
+ArithmeticException
+
+SQLException
+2. Fungsi finally dalam blok try–catch–finally
+
+Blok finally adalah kode yang PASTI dijalankan, baik terjadi exception maupun tidak.
+
+Fungsi utama:
+
+Membersihkan resource
+
+Menutup koneksi
+
+Menjamin proses akhir tetap dieksekusi
+
+Contoh:
+try {
+    transaksi.prosesPembayaran();
+} catch (Exception e) {
+    System.out.println("Terjadi kesalahan transaksi");
+} finally {
+    koneksiDatabase.close();
+}
+
+
+3. Mengapa Custom Exception diperlukan?
+
+Custom exception diperlukan ketika:
+
+Exception bawaan tidak cukup menjelaskan konteks bisnis
+
+Ingin pesan error yang lebih spesifik & bermakna
+
+Memisahkan logika bisnis dari error teknis
+
+Tanpa custom exception:
+throw new Exception("Error");
+Dengan custom exception:
+throw new StokTidakCukupException("Stok barang A hanya tersisa 2");
+
+4. Contoh Kasus Bisnis POS yang Membutuhkan Custom Exception
+Kasus 1: Stok Tidak Cukup
+
+Saat kasir menjual barang melebihi stok.
+
+Custom Exception:
+
+class StokTidakCukupException extends Exception {
+    public StokTidakCukupException(String pesan) {
+        super(pesan);
+    }
+}
+
+
+Pemakaian:
+
+if (jumlahBeli > stokBarang) {
+    throw new StokTidakCukupException("Stok barang tidak mencukupi");
+}
+
+ Kasus 2: Pembayaran Kurang
+
+Uang yang dibayar pelanggan kurang dari total belanja.
+
+Custom Exception:
+
+class PembayaranKurangException extends Exception {
+    public PembayaranKurangException(String pesan) {
+        super(pesan);
+    }
+}
+
+Kasus 3: Kasir Belum Login
+
+Transaksi dilakukan tanpa autentikasi kasir.
+
+Custom Exception:
+
+class KasirBelumLoginException extends Exception {
+    public KasirBelumLoginException(String pesan) {
+        super(pesan);
+    }
+}
